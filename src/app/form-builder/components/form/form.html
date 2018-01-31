@@ -1,0 +1,12 @@
+<ion-list *ngFor="let section of form.sections">
+    <ion-list-header *ngIf="section.name">
+        {{section.name}}
+    </ion-list-header>
+
+    <div *ngFor="let field of section.fields">
+        <div [ngSwitch]="field.type">
+            <textbox *ngSwitchCase="'textbox'" [field]="field"></textbox>
+            <text-area *ngSwitchCase="'textarea'" [field]="field"></text-area>
+        </div>
+    </div>
+</ion-list>

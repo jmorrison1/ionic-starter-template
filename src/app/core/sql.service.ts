@@ -38,7 +38,7 @@ export class SqlService {
         this.queryAll([
 
             // Create statements and alter statements here
-            new Query('CREATE TABLE IF NOT EXISTS tbl_User (id, name)'),
+            new Query('CREATE TABLE IF NOT EXISTS tbl_User (id, email, name)'),
 
         ]).catch((err) => console.log(err));
     }
